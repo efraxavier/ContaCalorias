@@ -79,7 +79,7 @@ public class ConexaoDB {
 		    	int auxCarb = 0;
 		    	int auxFat = 0;
 			    
-			    System.out.println("\n   CALORIAS DIA "+date+" PARA "+userName);
+			    System.out.println("\n\t   CALORIAS DIA "+date+" PARA "+userName);
 		        while (rs.next()) {
 		            int cal = rs.getInt("Calorias");
 		            int prot = rs.getInt("Proteinas");
@@ -95,10 +95,10 @@ public class ConexaoDB {
 
 		            String name = rs.getString("AlimentoNome");
 
-		            System.out.println("\nNome: "+ name +"\nCalorias: "+ cal + "kcal Carboidrato: " + carb + "g Proteinas: " + prot + "g Gordura: " + fat + "g");
+		            System.out.println("\n\tNome: "+ name +"\n\tCalorias: "+ cal + "kcal Carboidrato: " + carb + "g Proteinas: " + prot + "g Gordura: " + fat + "g");
 
 		        }
-		        System.out.println("\nCalorias no dia: "+auxCal+"kcal Carboidrato: " + auxCarb + "g Proteinas: " + auxProt + "g Gordura: " + auxFat + "g\n");
+		        System.out.println("\n\tCalorias no dia: "+auxCal+"kcal Carboidrato: " + auxCarb + "g Proteinas: " + auxProt + "g Gordura: " + auxFat + "g\n");
 
 		} catch (SQLException e) {
 
@@ -320,11 +320,11 @@ public class ConexaoDB {
 			        	
 			            String nameAlim = rs1.getString("alimNomeT");
 			            if(nameAlim.contains("TOTAL")) {
-			            	System.out.println("\n"+ nameAlim +" consumidos dia "+date+"\nCalorias: "+ cal + "kcal Carboidrato: " + carb + "g Proteinas: " + prot + "g Gordura: " + fat + "g\n");	
+			            	System.out.println("\n\t"+ nameAlim +" consumidos dia "+date+"\n\tCalorias: "+ cal + "kcal Carboidrato: " + carb + "g Proteinas: " + prot + "g Gordura: " + fat + "g\n");	
 					        System.out.println("=======================================================================================\n");
 
 			            }else {
-				            System.out.println("\nNome do alimento: "+ nameAlim +"\nCalorias: "+ cal + "kcal Carboidrato: " + carb + "g Proteinas: " + prot + "g Gordura: " + fat + "g");		
+				            System.out.println("\n\tNome do alimento: "+ nameAlim +"\n\tCalorias: "+ cal + "kcal Carboidrato: " + carb + "g Proteinas: " + prot + "g Gordura: " + fat + "g");		
 			            }
 		        }
                    
